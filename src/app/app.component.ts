@@ -30,7 +30,7 @@ export class AppComponent {
       this.receta = datosCrudos.map(mapApiToReceta);
     });
   }
-  
+
   trackByRecetaId(index: number, receta: Receta): string {
     return receta.id;
   }
@@ -41,5 +41,13 @@ export class AppComponent {
     this.selectedRecetaId = this.selectedRecetaId === id ? null : id;
   }
 
+  mostrarRecetas = false;
 
+  mostrarMenuPrincipal() {
+    this.mostrarRecetas = false;
+  }
+
+  mostrarRecetasComida() {
+    this.mostrarRecetas = true;
+  }
 }
